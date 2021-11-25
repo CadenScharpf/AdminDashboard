@@ -12,9 +12,10 @@
         <%: Scripts.Render("~/bundles/modernizr") %>
     </asp:PlaceHolder>
 
-    <webopt:bundlereference runat="server" path="~/Content/css" />
-    <link href="~/favicon.ico" rel="shortcut icon" type="image/x-icon" />
-
+    <webopt:BundleReference runat="server" Path="~/Content/css" />
+    <%--<link href="Content/headers.css" rel="stylesheet" />--%>
+    <link href="Content/navbar.css" rel="stylesheet" />
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css" integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
 </head>
 <body>
     <form runat="server">
@@ -25,6 +26,7 @@
                 <asp:ScriptReference Name="MsAjaxBundle" />
                 <asp:ScriptReference Name="jquery" />
                 <asp:ScriptReference Name="bootstrap" />
+                <asp:ScriptReference Path="~/Scripts/popper.js" />
                 <asp:ScriptReference Name="WebForms.js" Assembly="System.Web" Path="~/Scripts/WebForms/WebForms.js" />
                 <asp:ScriptReference Name="WebUIValidation.js" Assembly="System.Web" Path="~/Scripts/WebForms/WebUIValidation.js" />
                 <asp:ScriptReference Name="MenuStandards.js" Assembly="System.Web" Path="~/Scripts/WebForms/MenuStandards.js" />
@@ -38,25 +40,87 @@
             </Scripts>
         </asp:ScriptManager>
 
-        <div class="navbar navbar-inverse navbar-fixed-top">
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top" role="navigation">
             <div class="container">
-                <div class="navbar-header">
-                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
-                    </button>
-                    <a class="navbar-brand" runat="server" href="~/">Application name</a>
-                </div>
-                <div class="navbar-collapse collapse">
+                <a class="navbar-brand" href="#">Brand</a>
+                <button class="navbar-toggler border-0" type="button" data-toggle="collapse" data-target="#exCollapsingNavbar">
+                    &#9776;
+       
+                </button>
+                <div class="collapse navbar-collapse" id="exCollapsingNavbar">
                     <ul class="nav navbar-nav">
-                        <li><a runat="server" href="~/">Home</a></li>
-                        <li><a runat="server" href="~/About">About</a></li>
-                        <li><a runat="server" href="~/Contact">Contact</a></li>
+                        <li class="nav-item"><a href="#" class="nav-link">About</a></li>
+                        <li class="nav-item"><a href="#" class="nav-link">Link</a></li>
+                        <li class="nav-item"><a href="#" class="nav-link">Service</a></li>
+                        <li class="nav-item"><a href="#" class="nav-link">More</a></li>
+                    </ul>
+                     <ul class="nav navbar-nav flex-row justify-content-between ml-auto">
+                        <li class="nav-item order-2 order-md-1"><a href="#" class="nav-link" title="settings"><i class="fa fa-cog fa-fw fa-lg"></i></a></li>
+                        <li class="dropdown order-1">
+                            <button type="button" id="dropdownMenu1" data-toggle="dropdown" class="btn btn-outline-secondary dropdown-toggle"><i class="fas fa-user"></i></button>
+                            <ul class="dropdown-menu dropdown-menu-right mt-2">
+                                <li class="px-3 py-2">
+                                    <div class="form-group">
+                                        <input id="usernameInput" runat="server" placeholder="Username" class="form-control form-control-sm" type="text" required="">
+                                    </div>
+                                    <div class="form-group">
+                                        <input id="passwordInput" runat="server" placeholder="Password" class="form-control form-control-sm" type="text" required="">
+                                    </div>
+                                    <div class="form-group">
+                                        <button type="submit" class="btn btn-primary btn-block" runat="server" onServerClick="On_Login_Button">Login</button>
+                                        <button type="submit" class="btn btn-primary btn-block" runat="server" onServerClick="On_Register_Button">Create Account</button>
+                                    </div>
+                                </li>
+                            </ul>
+                        </li>
                     </ul>
                 </div>
             </div>
+        </nav>
+
+        <div id="modalPassword" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h3>Forgot password</h3>
+                        <button type="button" class="close font-weight-light" data-dismiss="modal" aria-hidden="true">×</button>
+                    </div>
+                    <div class="modal-body">
+                        <p>Reset your password..</p>
+                    </div>
+                    <div class="modal-footer">
+                        <button class="btn" data-dismiss="modal" aria-hidden="true">Close</button>
+                        <button class="btn btn-primary">Save changes</button>
+                    </div>
+                </div>
+            </div>
         </div>
+
+        <%--
+        <nav class="navbar navmar-expand-md navbar-dark fixed-top text-light" style="background-image: linear-gradient(#c7ddcc,#4cbfa6);" >
+            <a class="navbar-brand" href="#">MyTecBits.com</a>
+            <button class="navbar-toggler collapsed" type="button" data-toggle="collapse" data-target="#navbar" aria-controls="navbar" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div id="navbar" class="navbar-collapse collapse">
+                <ul class="navbar-nav mr-auto">
+                    <li class="nav-item active"><a class="nav-link" href="/Pages/Default.aspx">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="/Pages/About.aspx">About</a></li>
+                    <li class="nav-item"><a class="nav-link" href="/Pages/Contact.aspx" >Contact</a></li>
+                    <li class="nav-item"><a class="nav-link" href="/Pages/Contact.aspx">Contact</a></li>
+                    <li class="nav-item"><a class="nav-link" href="/Pages/Contact.aspx">Contact</a></li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" id="dropdown04″">Dropdown <span class="caret"></span></a>
+                        <div class="dropdown-menu" aria-labelledby="dropdown04">
+                            <a class="dropdown-item" href="/Pages/Login.aspx">Login</a>
+                            <a class="dropdown-item" href="/Pages/Register.aspx">Register</a>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+        --%>
+
         <div class="container body-content">
             <asp:ContentPlaceHolder ID="MainContent" runat="server">
             </asp:ContentPlaceHolder>
@@ -65,7 +129,9 @@
                 <p>&copy; <%: DateTime.Now.Year %> - My ASP.NET Application</p>
             </footer>
         </div>
-
     </form>
+
+
+
 </body>
 </html>

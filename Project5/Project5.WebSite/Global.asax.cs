@@ -17,5 +17,29 @@ namespace Project5.WebSite
             RouteConfig.RegisterRoutes(RouteTable.Routes);
             BundleConfig.RegisterBundles(BundleTable.Bundles);
         }
+        void Application_End()
+        {
+
+        }
+        void Session_Start(object sender, EventArgs e)
+        {
+
+        }
+        void Session_End(object sender, EventArgs e)
+        {
+
+        }
+        void Application_AuthenticateRequest(object sender, EventArgs e)
+        {
+
+        }
+        void Application_AuthorizeRequest(object sender, EventArgs e)
+        {
+
+        }
+        void Application_AcquireRequestState(object sender, EventArgs e)
+        {
+
+        }
     }
 }

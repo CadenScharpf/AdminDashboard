@@ -11,7 +11,19 @@ namespace Project5.WebSite
     {
         protected void Page_Load(object sender, EventArgs e)
         {
+            
+        }
 
+        protected void On_Register_Button(object sender, EventArgs e)
+        {
+            string username = usernameInput.Value;
+            string password = passwordInput.Value;
+        }
+        protected void On_Login_Button(object sender, EventArgs e)
+        {
+            string username = usernameInput.Value;
+            string password = passwordInput.Value;
+            
         }
     }
 }
