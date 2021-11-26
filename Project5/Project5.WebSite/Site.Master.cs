@@ -14,6 +14,8 @@ namespace Project5.WebSite
             
         }
 
+
+        /*
         protected void On_Register_Button(object sender, EventArgs e)
         {
             string username = usernameInput.Value;
@@ -25,5 +27,6 @@ namespace Project5.WebSite
             string password = passwordInput.Value;
             
         }
+        */
     }
 }

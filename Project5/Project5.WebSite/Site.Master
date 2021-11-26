@@ -11,11 +11,13 @@
     <asp:PlaceHolder runat="server">
         <%: Scripts.Render("~/bundles/modernizr") %>
     </asp:PlaceHolder>
-
     <webopt:BundleReference runat="server" Path="~/Content/css" />
-    <%--<link href="Content/headers.css" rel="stylesheet" />--%>
+
+    <%-- STYLES --%>
     <link href="Content/navbar.css" rel="stylesheet" />
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css" integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
+    <link href="~/Content/sb-admin-2.css" rel="stylesheet" />
+
 </head>
 <body>
     <form runat="server">
@@ -27,6 +29,9 @@
                 <asp:ScriptReference Name="jquery" />
                 <asp:ScriptReference Name="bootstrap" />
                 <asp:ScriptReference Path="~/Scripts/popper.js" />
+                <asp:ScriptReference Path="~/Scripts/jquery.dataTables.js" />
+                <asp:ScriptReference Path="~/Scripts/dataTables.bootstrap4.js" />
+                <asp:ScriptReference Path="~/Scripts/sb-admin-2.min.jssb-admin-2.min.js" />
                 <asp:ScriptReference Name="WebForms.js" Assembly="System.Web" Path="~/Scripts/WebForms/WebForms.js" />
                 <asp:ScriptReference Name="WebUIValidation.js" Assembly="System.Web" Path="~/Scripts/WebForms/WebUIValidation.js" />
                 <asp:ScriptReference Name="MenuStandards.js" Assembly="System.Web" Path="~/Scripts/WebForms/MenuStandards.js" />
@@ -42,7 +47,7 @@
 
         <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top" role="navigation">
             <div class="container">
-                <a class="navbar-brand" href="#">Brand</a>
+                <a class="navbar-brand" href="/Default.aspx">Brand</a>
                 <button class="navbar-toggler border-0" type="button" data-toggle="collapse" data-target="#exCollapsingNavbar">
                     &#9776;
        
@@ -51,9 +56,12 @@
                     <ul class="nav navbar-nav">
                         <li class="nav-item"><a href="/Pages/About.aspx" class="nav-link">About</a></li>
                         <li class="nav-item"><a href="/Pages/Contact.aspx" class="nav-link">Contact</a></li>
+                        
                     </ul>
-                     <ul class="nav navbar-nav flex-row justify-content-between ml-auto">
-                        <li class="nav-item order-2 order-md-1"><a href="#" class="nav-link" title="settings"><i class="fa fa-cog fa-fw fa-lg"></i></a></li>
+                    <ul class="nav navbar-nav flex-row justify-content-between ml-auto">
+                        <li class="nav-item"><a href="/Pages/Login.aspx" class="nav-link">Log in</a></li>
+                        <li class="nav-item"><a href="/Pages/Contact.aspx" class="nav-link">Register</a></li>
+                        <%--
                         <li class="dropdown order-1">
                             <button type="button" id="dropdownMenu1" data-toggle="dropdown" class="btn btn-outline-secondary dropdown-toggle"><i class="fas fa-user"></i></button>
                             <ul class="dropdown-menu dropdown-menu-right mt-2">
@@ -65,12 +73,12 @@
                                         <input id="passwordInput" runat="server" placeholder="Password" class="form-control form-control-sm" type="text" required="">
                                     </div>
                                     <div class="form-group">
-                                        <button type="submit" class="btn btn-primary btn-block" runat="server" onServerClick="On_Login_Button">Login</button>
-                                        <button type="submit" class="btn btn-primary btn-block" runat="server" onServerClick="On_Register_Button">Create Account</button>
+                                        <button type="submit" class="btn btn-primary btn-block" runat="server" onserverclick="On_Login_Button">Login</button>
+                                        <button type="submit" class="btn btn-primary btn-block" runat="server" onserverclick="On_Register_Button">Create Account</button>
                                     </div>
                                 </li>
                             </ul>
-                        </li>
+                        </li>--%>
                     </ul>
                 </div>
             </div>
@@ -93,31 +101,6 @@
                 </div>
             </div>
         </div>
-
-        <%--
-        <nav class="navbar navmar-expand-md navbar-dark fixed-top text-light" style="background-image: linear-gradient(#c7ddcc,#4cbfa6);" >
-            <a class="navbar-brand" href="#">MyTecBits.com</a>
-            <button class="navbar-toggler collapsed" type="button" data-toggle="collapse" data-target="#navbar" aria-controls="navbar" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div id="navbar" class="navbar-collapse collapse">
-                <ul class="navbar-nav mr-auto">
-                    <li class="nav-item active"><a class="nav-link" href="/Pages/Default.aspx">Home</a></li>
-                    <li class="nav-item"><a class="nav-link" href="/Pages/About.aspx">About</a></li>
-                    <li class="nav-item"><a class="nav-link" href="/Pages/Contact.aspx" >Contact</a></li>
-                    <li class="nav-item"><a class="nav-link" href="/Pages/Contact.aspx">Contact</a></li>
-                    <li class="nav-item"><a class="nav-link" href="/Pages/Contact.aspx">Contact</a></li>
-                    <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" href="#" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" id="dropdown04″">Dropdown <span class="caret"></span></a>
-                        <div class="dropdown-menu" aria-labelledby="dropdown04">
-                            <a class="dropdown-item" href="/Pages/Login.aspx">Login</a>
-                            <a class="dropdown-item" href="/Pages/Register.aspx">Register</a>
-                        </div>
-                    </li>
-                </ul>
-            </div>
-        </nav>
-        --%>
 
         <div class="container body-content">
             <asp:ContentPlaceHolder ID="MainContent" runat="server">
