@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="927587f4-1517-45a0-8ade-544468402b1d" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
+    <GenerateTaskBasedAsynchronousMethod>true</GenerateTaskBasedAsynchronousMethod>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings />
+    <GenerateSerializableTypes>true</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <UseSerializerForFaults>true</UseSerializerForFaults>
+    <ReferenceAllAssemblies>true</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="http://webstrar78.fulton.asu.edu/Page6/AccountService.svc" Protocol="http" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="AccountService.xsd" MetadataType="Schema" ID="6546f843-c160-4cae-8fc2-d6d290f4e3a8" SourceId="1" SourceUrl="http://webstrar78.fulton.asu.edu/Page6/AccountService.svc?xsd=xsd1" />
+    <MetadataFile FileName="AccountService1.xsd" MetadataType="Schema" ID="3e2ff2d5-a0dd-40f2-9348-76f8cf1567ed" SourceId="1" SourceUrl="http://webstrar78.fulton.asu.edu/Page6/AccountService.svc?xsd=xsd2" />
+    <MetadataFile FileName="AccountServiceImpl.wsdl" MetadataType="Wsdl" ID="bbfaee5e-2dd2-4fd7-b4f9-4488773b2e68" SourceId="1" SourceUrl="http://webstrar78.fulton.asu.edu/Page6/AccountService.svc?wsdl" />
+    <MetadataFile FileName="AccountService.disco" MetadataType="Disco" ID="bad9cd9f-f8d2-418a-b93a-f6afa22f09e0" SourceId="1" SourceUrl="http://webstrar78.fulton.asu.edu/Page6/AccountService.svc?disco" />
+    <MetadataFile FileName="AccountService2.xsd" MetadataType="Schema" ID="987b4c89-948f-48b4-b88c-14ed3fcbaa73" SourceId="1" SourceUrl="http://webstrar78.fulton.asu.edu/Page6/AccountService.svc?xsd=xsd0" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>

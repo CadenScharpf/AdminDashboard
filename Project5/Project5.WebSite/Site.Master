@@ -56,7 +56,8 @@
                     <ul class="nav navbar-nav">
                         <li class="nav-item"><a href="/Pages/About.aspx" class="nav-link">About</a></li>
                         <li class="nav-item"><a href="/Pages/Contact.aspx" class="nav-link">Contact</a></li>
-                        
+                        <li class="nav-item"><a href="/Pages/MemberHome.aspx" class="nav-link">Members</a></li>
+                        <li class="nav-item"><a href="/Pages/StaffHome.aspx" class="nav-link">Staff</a></li>
                     </ul>
                     <ul class="nav navbar-nav flex-row justify-content-between ml-auto">
                         <li class="nav-item"><a href="/Pages/Login.aspx" class="nav-link">Log in</a></li>

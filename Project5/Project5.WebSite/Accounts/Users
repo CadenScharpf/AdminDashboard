@@ -1,0 +1,15 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<members>
+  <user>
+    <uname>testMember</uname>
+    <type>member</type>
+  </user>
+  <user>
+    <uname>TA</uname>
+    <type>staff</type>
+  </user>
+  <user>
+    <uname>testStaff</uname>
+    <type>staff</type>
+  </user>
+</members>

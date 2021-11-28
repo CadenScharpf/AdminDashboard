@@ -3,6 +3,7 @@
 <!DOCTYPE html>
 
 <html xmlns="http://www.w3.org/1999/xhtml">
+
 <head runat="server">
     <title></title>
     <link
@@ -29,7 +30,7 @@
                                         <div class="text-center">
                                             <h1 class="h4 text-gray-900 mb-4">Welcome Back!</h1>
                                         </div>
-                                        <div class="user">
+                                        <div class="user" runat="server" id="LoginBox">
                                             <div class="form-group">
                                                 <input type="text" class="form-control form-control-user"
                                                     id="exampleInputEmail" aria-describedby="emailHelp"
@@ -39,8 +40,7 @@
                                                 <input type="password" class="form-control form-control-user"
                                                     id="exampleInputPassword" placeholder="Password" runat="server" />
                                             </div>
-                                            <a href="index.html" class="btn btn-primary btn-user btn-block">Login
-                                            </a>
+                                            <a href="index.html" class="btn btn-primary btn-user btn-block" runat="server" onserverclick="OnLoginButtonClick">Login</a>
                                             <hr />
                                         </div>
                                         <hr />

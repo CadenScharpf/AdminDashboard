@@ -1,15 +1,7 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="MemberHome.aspx.cs" Inherits="Project5.WebSite.WebForm1" %>
-
-<!DOCTYPE html>
-
-<html xmlns="http://www.w3.org/1999/xhtml">
-<head runat="server">
-    <title></title>
-</head>
-<body>
-    <form id="form1" runat="server">
-        <div>
+﻿<%@ Page Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="MemberHome.aspx.cs" Inherits="Project5.WebSite.MemberHome" %>
+<%@ Register TagPrefix = "User" TagName="MemberTable" src="~/Components/MemberTable.ascx" %>
+<asp:Content ID="BodyContent" ContentPlaceHolderID="MainContent" runat="server">
+        <div id="form1" runat="server">
+            <User:MemberTable runat="server"/>
         </div>
-    </form>
-</body>
-</html>
+</asp:Content>
