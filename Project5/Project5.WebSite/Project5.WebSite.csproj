@@ -120,6 +120,8 @@
       <Generator>WCF Proxy Generator</Generator>
       <LastGenOutput>Reference.cs</LastGenOutput>
     </None>
+    <Content Include="Components\AdminPage.ascx" />
+    <Content Include="Components\StaffPage.ascx" />
     <Content Include="Content\dataTables.bootstrap4.css" />
     <Content Include="Content\navbar.css" />
     <Content Include="Pages\About.aspx" />
@@ -299,6 +301,20 @@
   <ItemGroup>
     <Compile Include="Accounts\Helpers.cs" />
     <Compile Include="App_Start\BundleConfig.cs" />
+    <Compile Include="Components\AdminPage.ascx.cs">
+      <DependentUpon>AdminPage.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Components\AdminPage.ascx.designer.cs">
+      <DependentUpon>AdminPage.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Components\StaffPage.ascx.cs">
+      <DependentUpon>StaffPage.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Components\StaffPage.ascx.designer.cs">
+      <DependentUpon>StaffPage.ascx</DependentUpon>
+    </Compile>
     <Compile Include="Connected Services\AccountDetailsService\Reference.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>

@@ -7,20 +7,20 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace Project5.WebSite
+namespace Project5.WebSite.Components
 {
 
 
-    public partial class _Default
+    public partial class StaffPage
     {
 
         /// <summary>
-        /// in2 control.
+        /// maincontent control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlInputButton in2;
+        protected global::System.Web.UI.HtmlControls.HtmlGenericControl maincontent;
     }
 }

@@ -9,7 +9,8 @@
     <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">
         Add Device
     </button>
-    <br />
+    <br/>
+    <br/>
     <%-- Data Table --%>
     <table id="example" class="table table-striped table-bordered" style="width: 100%">
         <thead>
@@ -28,7 +29,7 @@
         <div class="modal-dialog" role="document">
             <div class="modal-content">
                 <div class="modal-header">
-                    <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+                    <h5 class="modal-title" id="exampleModalLabel">Device Info</h5>
                     <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                         <span aria-hidden="true">&times;</span>
                     </button>

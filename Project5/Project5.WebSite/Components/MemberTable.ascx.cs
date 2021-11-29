@@ -19,7 +19,7 @@ namespace Project5.WebSite
 
             HttpCookie cookie = Request.Cookies["CSE445Cookie"];
             string type = Helpers.Authenticate(Session["User"].ToString(), Session["Auth"].ToString());
-            if (cookie == null || cookie["Type"] != "member" || cookie["Auth"] == null || type == "dne" || type == "!pwd")
+            if ( Session["Type"] != "member" || Session["Auth"] == null || type == "dne" || type == "!pwd")
             { maincontent.InnerText = "Sorry, access is not permitted."; }
             else
             {
@@ -70,12 +70,7 @@ namespace Project5.WebSite
                 string s = client.AddDevice(ImeiInput.Value, ModelInput.Value, Session["User"].ToString(), "password");
                 ImeiInput.Value = ""; ModelInput.Value = "";
                 Response.Redirect("~/Pages/MemberHome.aspx");
-                Response.Redirect(Request.RawUrl);
             }
-        }
-        protected void OnCloseModalClick(object sender, EventArgs e)
-        {
-
         }
 
 

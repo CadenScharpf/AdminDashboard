@@ -15,6 +15,24 @@ namespace Project5.WebSite
     {
 
         /// <summary>
+        /// libutton control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.HtmlControls.HtmlAnchor libutton;
+
+        /// <summary>
+        /// sobutton control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.HtmlControls.HtmlAnchor sobutton;
+
+        /// <summary>
         /// MainContent control.
         /// </summary>
         /// <remarks>

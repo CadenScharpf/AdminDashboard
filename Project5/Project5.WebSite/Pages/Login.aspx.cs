@@ -45,6 +45,7 @@ namespace Project5.WebSite
                         HttpCookie cookies = new HttpCookie("CSE445Cookie");
                         Session["User"] = username;
                         Session["Type"] = "staff";
+                        Session["Auth"] = pwhash;
                         cookies["User"] = username;
                         cookies["Auth"] = pwhash;
                         cookies["Type"] = "staff";
@@ -61,6 +62,7 @@ namespace Project5.WebSite
                         HttpCookie cookies = new HttpCookie("CSE445Cookie");
                         Session["User"] = username;
                         Session["Type"] = "admin";
+                        Session["Auth"] = pwhash;
                         cookies["User"] = username;
                         cookies["Auth"] = pwhash;
                         cookies["Type"] = "admin";
@@ -68,20 +70,23 @@ namespace Project5.WebSite
                         Response.Cookies.Add(cookies);
                         LoginBox.Attributes["class"] = "user alert alert-success";
                         Thread.Sleep(2000);
-                        Response.Redirect("StaffHome.aspx");
+                        Response.Redirect("Admin.aspx");
                     }
                     break;
 
                 case "dne":
-                    LoginBox.Attributes["class"] = "user alert alert-primary";
+                    LoginBox.Attributes["class"] = "user alert alert-danger";
+                    warningp.InnerText = "Error. Username does not Exist";
                     break;
 
                 case "!pwd":
-                    LoginBox.Attributes["class"] = "user alert alert-primary";
+                    LoginBox.Attributes["class"] = "user alert alert-danger";
+                    warningp.InnerText = "Error. Password invalid";
                     break;
 
                 default:
-                    LoginBox.Attributes["class"] = "user alert alert-primary";
+                    LoginBox.Attributes["class"] = "user alert alert-danger";
+                    warningp.InnerText = "An unknown error has occurred";
                     break;
             }
             string c = $"{exampleInputEmail.Value} {pwhash}";

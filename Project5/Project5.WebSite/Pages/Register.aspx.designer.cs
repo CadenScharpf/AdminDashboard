@@ -24,39 +24,39 @@ namespace Project5.WebSite.Pages
         protected global::System.Web.UI.HtmlControls.HtmlForm form1;
 
         /// <summary>
-        /// exampleFirstName control.
+        /// regeBox control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlInputText exampleFirstName;
+        protected global::System.Web.UI.HtmlControls.HtmlGenericControl regeBox;
 
         /// <summary>
-        /// exampleLastName control.
+        /// warningp control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlInputText exampleLastName;
+        protected global::System.Web.UI.HtmlControls.HtmlGenericControl warningp;
 
         /// <summary>
-        /// exampleInputEmail control.
+        /// InputUser control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlInputText exampleInputEmail;
+        protected global::System.Web.UI.HtmlControls.HtmlInputText InputUser;
 
         /// <summary>
-        /// exampleInputPassword control.
+        /// InputPassword control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlInputPassword exampleInputPassword;
+        protected global::System.Web.UI.HtmlControls.HtmlInputPassword InputPassword;
     }
 }

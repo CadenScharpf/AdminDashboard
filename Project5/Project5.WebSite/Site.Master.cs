@@ -11,7 +11,8 @@ namespace Project5.WebSite
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-            
+            if (Session["User"] != null) { sobutton.InnerText = "Sign out"; libutton.InnerText = ""; }
+            else { sobutton.InnerText = ""; libutton.InnerText = "Sign in"; }
         }
 
 
@@ -28,5 +29,12 @@ namespace Project5.WebSite
             
         }
         */
+        protected void OnSignOutClick(object sender, EventArgs e)
+        {
+
+            Session.Clear();
+            Response.Cookies.Remove("CSE445Cookie");
+            Response.Redirect("~/Default.aspx");
+        }
     }
 }

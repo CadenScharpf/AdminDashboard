@@ -33,6 +33,15 @@ namespace Project5.WebSite
         protected global::System.Web.UI.HtmlControls.HtmlGenericControl LoginBox;
 
         /// <summary>
+        /// warningp control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.HtmlControls.HtmlGenericControl warningp;
+
+        /// <summary>
         /// exampleInputEmail control.
         /// </summary>
         /// <remarks>

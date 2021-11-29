@@ -60,8 +60,8 @@
                         <li class="nav-item"><a href="/Pages/StaffHome.aspx" class="nav-link">Staff</a></li>
                     </ul>
                     <ul class="nav navbar-nav flex-row justify-content-between ml-auto">
-                        <li class="nav-item"><a href="/Pages/Login.aspx" class="nav-link">Log in</a></li>
-                        <li class="nav-item"><a href="/Pages/Contact.aspx" class="nav-link">Register</a></li>
+                        <li class="nav-item"><a href="/Pages/Login.aspx" class="nav-link" runat="server" id="libutton">Log in</a></li>
+                        <li class="nav-item"><a href="/Pages/Contact.aspx" class="nav-link" runat="server" id="sobutton" onserverclick="OnSignOutClick"> </a></li>
                         <%--
                         <li class="dropdown order-1">
                             <button type="button" id="dropdownMenu1" data-toggle="dropdown" class="btn btn-outline-secondary dropdown-toggle"><i class="fas fa-user"></i></button>
