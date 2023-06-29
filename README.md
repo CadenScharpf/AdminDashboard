@@ -12,7 +12,7 @@
 
 ## Overview
 
-<div style="">
+<div style="width: 800px">
 
     This repository contains the front and back end source code for a basic service oriented web application with user authentication. The application has three basic user types: Admin, Staff, and Members. Depending on the type of user, different interfaces and operations will be accessable. For example, Only Admins are able to add and remove Staff accounts. Both Admin and Staff can access the staff page to modify Member account information. Members may only access the members page and may only modify their own information. 
 
@@ -20,7 +20,7 @@
 
 
 ## Installation
-<div style="">
+<div style="width: 800px">
     
     To run the application , follow these steps:
 
@@ -36,7 +36,7 @@
 
 
 ## License
-<div style="">
+<div style="width: 800px">
     
     This program is licensed under the MIT License. See the [LICENSE](LICENSE) file for more information.
     
